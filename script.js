@@ -8,7 +8,7 @@ var button = document.querySelector("button");
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 button.addEventListener("click", setGradientRandom);
-body.addEventListener("onload", exhibitBackground());
+
 
 
 //Original function to set gradient of background 
@@ -22,10 +22,6 @@ body.style.background =
 css.textContent = body.style.background + ";";
 }
 
-//Another function I made so that I change the background once more but for button
-function setGradient2() {
-	css.textContent = body.style.background + ";";
-}
 
 //Found on StackOverFlow
 //https://stackoverflow.com/questions/49329179/random-hex-color
@@ -39,8 +35,8 @@ function setGradientRandom() {
 	//Calls hexGenerator to generate random rgb values to the background
 	body.style.background = "linear-gradient(to right, " + hexGenerator() + "," + hexGenerator() + ")";
 
-	//calls setGradient2 on here so it says on the text
-	setGradient2();
+	//here displays the text on-screen for RBG
+	css.textContent = body.style.background + ";";
 }
 
 
